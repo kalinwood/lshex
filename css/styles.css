@@ -14,7 +14,12 @@
 /*-----------------------------------*\
 	$TYPE
 \*-----------------------------------*/
-
+::selection {
+	background: #0088cc; /* Safari */
+	}
+::-moz-selection {
+	background: #0088cc; /* Firefox */
+}
 h1, .alpha {
 	font-family: 'Proxima Nova Soft', 'Arial Rounded mt bold', Helvetica Neue, Arial, sans-serif;
 	text-align: center;
@@ -33,17 +38,11 @@ h2 {
 
 p {
 	font-family: 'Proxima Nova Soft', 'Arial Rounded mt bold', Helvetica Neue, Arial, sans-serif;
-	font-size: 18px;
+	font-size: 22px;
 	line-height: 2;
 	color: white;
-	padding-top: 120px;
-	padding-bottom: 150px; 
-	opacity: 0;
 }
 
-p:hover {
-	opacity: 1;
-}
 
 /*-----------------------------------*\
 	$MAIN
@@ -59,6 +58,10 @@ body {
 
 .hero {
 	height: 100%;
+	z-index: 9999;
+	-webkit-box-shadow: 0px 1px 0px 0px rgba(50, 50, 50, 0.1);
+	-moz-box-shadow:    0px 1px 0px 0px rgba(50, 50, 50, 0.1);
+	box-shadow:         0px 1px 0px 0px rgba(50, 50, 50, 0.1);
 }
 
 .top {
@@ -71,6 +74,54 @@ body {
 	left: 0; right: 0;
 	margin: 0 auto;
 	position: absolute;
+}
+.container { 
+	padding-top:130px;
+	cursor:pointer;
+}
+.container:hover {
+	padding-top:120px;
+	color:#ffffff;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+}
+.hexvalue {
+	margin-top:70px;
+	opacity:0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	cursor:text;
+	
+}
+p.hexvalue{
+	font-size:25px;
+	padding:0 20px;
+}
+.container:hover .hexvalue {
+	margin-top:-10px;
+	opacity:.5;
+	color:#ffffff;
+}
+
+.hexvalue2 {
+	margin-top:70px;
+	opacity:0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	cursor:text;
+	
+}
+p.hexvalue2{
+	font-size:25px;
+	padding:0 20px;
+}
+.container:hover .hexvalue2 {
+	margin-top:-10px;
+	opacity:1;
+	color:#ffffff;
 }
 
 .hex-a {
@@ -203,9 +254,12 @@ body {
 
 .link {
 	width: 100%;
-	height: 250px;
+	height: 300px;
 	background-color: #0088cc;
-	display: inline-block;
+	display:block;
+	float:left;
+	padding-top:130px;
+	text-align:center;
 }
 
 footer {
@@ -225,9 +279,7 @@ footer {
 
 .blue {
 	text-align: center;
-	padding-top: 90px;
 }
-
 
 
 
